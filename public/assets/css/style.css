@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    color: black;
+    text-align: center;
+}
+h1:first-letter{
+    color: red;
+}
+
+.div-one{
+    height: 400px;
+    width: 190px;
+    background-image: url("../img/ganghum.png");
+    animation-name: dans;
+    animation-duration: 2s;
+    animation: gan 4s steps(23,start) infinite,
+    dans 12s steps(69,end) infinite alternate 44ms;
+    animation-direction: normal,alternate;
+}
+@keyframes dans {
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(400px);
+    }
+}
+@keyframes gan {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -5120px;
+    }
+}
+
+.col-1{width: 8.33%}
+.col-2{width: 16.66%}
+.col-3{width: 25%}
+.col-4{width: 33.33%}
+.col-5{width: 41.66%}
+.col-6{width: 50%}
+.col-7{width: 58.33%}
+.col-8{width: 66.66%}
+.col-9{width: 75%}
+.col-10{width: 83.33%}
+.col-11{width: 91.66%}
+.col-12{width: 100%}
+
+.h20{height: 20px}
+.h50{height: 50px}
+.h150{height: 300px}
+.h200{height: 400px}
+
+.container{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+
+}
+.row:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+[class*='col-']
+{
+    float: left;
+    border: 1px solid hotpink;
+}
